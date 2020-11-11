@@ -1,15 +1,13 @@
-import java.io.BufferedReader;
+import java.util.Scanner;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Pascal
 {
     public static void main(String[] args) throws IOException
     {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        System.out.print("Enter N: ");
-        int n = br.read();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter any number: ");
+        int n = scan.nextInt();
         int[] currentArray = new int[n];
         currentArray[0] = 1;
         for (int i = 0; i < n; i++)
@@ -29,7 +27,7 @@ public class Pascal
             }
             System.arraycopy(a, 0, currentArray, 0, a.length);
             for (int element: a) {
-                System.out.print(element);
+                System.out.print(element + " ");
             }
             System.out.printf("%n");
         }
