@@ -6,14 +6,13 @@ public class Pascal
 {
     public static void main(String[] args) throws IOException
     {
-        //InputStreamReader isr = new InputStreamReader(System.in);
-        //BufferedReader br = new BufferedReader(isr);
-        //System.out.print("Enter N: ");
-        //int N = br.read();
-        int N = 5;
-        int[] currentArray = new int[N];
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        System.out.print("Enter N: ");
+        int n = br.read();
+        int[] currentArray = new int[n];
         currentArray[0] = 1;
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < n; i++)
         {
             int[] a = new int[i+1];
             for (int j = 0; j <= i; j++)
